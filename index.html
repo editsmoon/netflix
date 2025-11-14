@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #141414;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .hero-section {
+      background: url("https://assets.nflxext.com/ffe/siteui/vlv3/5df9cf1d-0f0f-4e68-a678-f5a770e6d2a3/cbaf3878-4644-490f-909c-cc53f4cbaad8/IN-en-20230724-popsignuptwoweeks-perspective_alpha_website_small.jpg") no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .btn-danger {
+      background-color: #e50914;
+      border: none;
+    }
+
+    .movie-section {
+      margin-top: 2rem;
+    }
+
+    .movie-title {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .movie-card img {
+      border-radius: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .movie-card img:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 2rem 0;
+      background-color: #000;
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">TV Shows</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Movies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">New & Popular</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">My List</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-white">
+      <h1>Unlimited movies, TV shows and more.</h1>
+      <p>Watch anywhere. Cancel anytime.</p>
+      <a href="#" class="btn btn-danger btn-lg mt-3">Watch Now</a>
+    </div>
+    		
+ 
+  </section>
+
+
+  <div class="container movie-section">
+    <h3 class="movie-title">Trending Now</h3>
+    <div class="row g-2 flex-nowrap overflow-auto">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="Dr stone.jpg" class="img-fluid" alt="Movie">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="https://image.tmdb.org/t/p/w300/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg" class="img-fluid" alt="Movie">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="https://image.tmdb.org/t/p/w300/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" class="img-fluid" alt="Movie">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="one piece.jpg" class="img-fluid" alt="Movie">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="https://image.tmdb.org/t/p/w300/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" class="img-fluid" alt="Movie">
+      </div>
+    </div>
+  </div>
+
+  <!-- Popular Section -->
+  <div class="container movie-section">
+    <h3 class="movie-title">Top Picks for You</h3>
+    <div class="row g-2 flex-nowrap overflow-auto">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="https://image.tmdb.org/t/p/w300/1E5baAaEse26fej7uHcjOgEE2t2.jpg" class="img-fluid" alt="Movie">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="https://image.tmdb.org/t/p/w300/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg" class="img-fluid" alt="Movie">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="https://image.tmdb.org/t/p/w300/6KErczPBROQty7QoIsaa6wJYXZi.jpg" class="img-fluid" alt="Movie">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2 movie-card">
+        <img src="myhero.jpg" class="img-fluid" alt="Movie">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- <footer>
+    <p>Netflix Clone UI built with Bootstrap 5</p>
+    <p>© 2025 Netflix, Inc. (Clone for demo purposes)</p>
+  </footer> -->
+
+  <footer class="bg-dark text-light pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+
+   
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">StreamVerse</h5>
+        <p>
+          Your world of unlimited movies, music, and live shows. Stream anywhere, anytime, on any device.
+        </p>
+      </div>
+
+    
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Explore</h5>
+        <p><a href="#" class="text-light text-decoration-none">Home</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Movies</a></p>
+        <p><a href="#" class="text-light text-decoration-none">TV Shows</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Music</a></p>
+      </div>
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Support</h5>
+        <p><a href="#" class="text-light text-decoration-none">Help Center</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Account</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Subscription Plans</a></p>
+        <p><a href="#" class="text-light text-decoration-none">Contact Us</a></p>
+      </div>
+
+    
+
+    <hr class="mb-4 mt-4">
+
+   
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p class="text-center text-md-start mb-0">
+          © 2025 <strong class="text-warning">StreamVerse</strong> — All Rights Reserved.
+        </p>
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-end">
+          <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+ 
+<a href="#top" class="tb" > <svg xmlns="http://www.w3.org/2000/svg" width="40" class="bn" height="40" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+</svg></a>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
